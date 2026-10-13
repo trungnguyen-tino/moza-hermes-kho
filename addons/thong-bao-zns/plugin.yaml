@@ -1,0 +1,20 @@
+name: thong-bao-zns
+label: Thông báo ZNS (Zalo OA)
+version: 1.0.0
+description: >
+  Tools for the owner's Hermes to list the Zalo Notification Service (ZNS) templates the owner allowed
+  and send one to a customer's phone number. Goes through the Moza portal, which holds the Zalo OA
+  tokens, checks the template and the daily cap, and pays Zalo's per-message fee from the OA's ZNS
+  balance. Python standard library only.
+author: Moza
+license: MIT
+
+requires_env:
+  - name: PORTAL_INGEST_URL
+    description: "Portal URL set on the machine by Moza; the portal base URL comes from it."
+    prompt: "Portal ingest URL"
+    password: false
+  - name: PORTAL_INGEST_TOKEN
+    description: "Per-assistant portal token set on the machine by Moza."
+    prompt: "Portal ingest token"
+    password: true

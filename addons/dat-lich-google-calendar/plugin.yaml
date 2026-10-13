@@ -1,0 +1,27 @@
+name: dat-lich-google-calendar
+label: Đặt lịch hẹn (Google Calendar)
+version: 1.0.0
+description: >
+  Tools for the owner's Hermes to read the owner's Google Calendar, find free slots and book or cancel
+  appointments. Uses the Google OAuth token the Moza portal pushes for the Google Workspace add-on
+  (GOOGLE_TOKEN_PATH) with the calendar.events scope; Python standard library only.
+author: Moza
+license: MIT
+
+optional_env:
+  - name: GOOGLE_TOKEN_PATH
+    description: "Path to the Google OAuth token the portal pushes (default /opt/data/google_token.json)."
+    prompt: "Google token path"
+    password: false
+  - name: LICH_HEN_CALENDAR_ID
+    description: "Calendar to book in (default: primary)."
+    prompt: "Calendar ID"
+    password: false
+  - name: LICH_HEN_TIMEZONE
+    description: "IANA time zone of the appointments (default Asia/Ho_Chi_Minh)."
+    prompt: "Time zone"
+    password: false
+  - name: LICH_HEN_GIO_LAM
+    description: "Working hours for free slots, HH:MM-HH:MM (default 08:00-18:00)."
+    prompt: "Working hours"
+    password: false

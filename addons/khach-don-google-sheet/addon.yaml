@@ -1,0 +1,14 @@
+# Add-on dạng kỹ năng (không có mã chạy trên máy): dùng tool có sẵn của add-on Google Sheets & Drive
+# (gsheet_read, gsheet_append, gdrive_list). Moza đưa SKILL.md vào thư viện kỹ năng với các trường
+# dưới đây; khách thấy nó trong danh mục Plugin & Skill.
+kind: skill
+name: khach-don-google-sheet          # skills.name (slug, ^[a-z0-9][a-z0-9-]{1,60}$)
+title: Sổ khách & đơn trên Google Sheet
+description: >-
+  Ghi khách và đơn hàng chủ máy đưa cho Hermes vào một Google Sheet theo đúng cột,
+  tra lại đơn theo tên, số điện thoại hoặc ngày, và tổng hợp đơn trong ngày.
+category: moza-ban-hang                # skills.category (^moza-[a-z0-9-]{1,40}$)
+biz_group: ban-hang
+customer_visible: true
+requires:
+  - google-workspace                   # add-on Google Sheets & Drive bật + đã Kết nối Google + đã chọn Sheet
